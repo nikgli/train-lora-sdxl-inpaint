@@ -12,7 +12,7 @@ pip install -U "huggingface_hub[cli]"
 ```
 2. Download the inpainting model
 ```bash
-huggingface-cli download diffusers/stable-diffusion-xl-1.0-inpainting-0.1 --local-dir ./sdxl-inpainting-1.0 --local-dir-use-symlinks False
+huggingface-cli download diffusers/stable-diffusion-xl-1.0-inpainting-0.1 --local-dir ./models/sdxl-inpainting-1.0 --local-dir-use-symlinks False
 ```
 3. Place your subject images in `dataset/subdir` and run
 ```bash
