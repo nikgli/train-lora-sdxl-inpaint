@@ -46,10 +46,9 @@ After running a few tests, arguably, doing dreambooth finetuning on the SDXL-inp
 | SDXL Inpainting | SD Inpainting |
 |---|---|
 | <img src="results/home-1-sdxl-lora-inpainting-1.png" alt="SDXL Inpainting Example 1"> | <img src="results/home-1-lora-sd-inpainting-1.png" alt="SD Inpainting Example 1"> |
-| <img src="results/home-1-sdxl-lora-inpainting-2.png" alt="SDXL Inpainting Example 2"> | <img src="results/home-1-lora-sd-inpainting-2.png" alt="SD Inpainting Example 2"> 
-| More detailed and realistic results | Less detailed and realistic results |
-| Better at handling complex scenes | Struggles with complex scenes |
-| Can generate images from scratch | Requires an existing image to modify |
+| <img src="results/home-1-sdxl-lora-inpainting-2.png" alt="SDXL Inpainting Example 2"> | <img src="results/home-1-lora-sd-inpainting-2.png" alt="SD Inpainting Example 2"> |
+| <img src="results/home-1-sdxl-lora-inpainting-3.png" alt="SDXL Inpainting Example 3"> | <img src="results/home-1-lora-sd-inpainting-3.png" alt="SD Inpainting Example 3"> |
+| <img src="results/home-1-sdxl-lora-inpainting-4.png" alt="SDXL Inpainting Example 4"> | <img src="results/home-1-lora-sd-inpainting-4.png" alt="SD Inpainting Example 4"> |
 
 # What this script maybe does
 
