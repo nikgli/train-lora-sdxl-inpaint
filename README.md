@@ -18,8 +18,8 @@ huggingface-cli download diffusers/stable-diffusion-xl-1.0-inpainting-0.1 --loca
 ```bash
 accelerate launch examples/research_projects/dreambooth_inpaint/train_dreambooth_inpaint_lora_sdxl.py \
     --pretrained_model_name_or_path="./models/sdxl-inpainting-1.0" \
-    --instance_data_dir="./dataset/your-subject" \
-    --output_dir="./lora-weights/sks-dog-sdxl-from-inpainting" \
+    --instance_data_dir="./dataset/your-subject-images-directory" \
+    --output_dir="./lora-weights/sks-your-subject-sdxl-from-inpainting" \
     --instance_prompt="a photo of a sks dog" \
     --mixed_precision="fp16" \
     --resolution=1024 \
@@ -32,9 +32,24 @@ accelerate launch examples/research_projects/dreambooth_inpaint/train_dreambooth
     --seed="42" \
 ```
 
+Make sure to replace the directory names and unique identifiers accordingly. At least 16GB of VRAM is required for training.
+
 # What this script does
 
-This is a fork of the [diffusers](https://github.com/huggingface/diffusers) repository with the only difference being the addition of the `train_dreambooth_inpaint_lora_sdxl.py` script. You could use this script to fine-tune the SDXL inpainting model UNet via LoRA adaptation with your own subject images. This could be useful in e-commerce applications, for virtual try-on for example. After running a few tests (which can be found in the results folder), arguably, doing dreambooth finetuning on the SDXL-inpaint model gives higher quality images than the proposed alternative with [SD inpainting model](https://github.com/cryptexis/diffusers/blob/sd_15_inpainting/examples/research_projects/dreambooth_inpaint/train_dreambooth_inpaint_lora.py)
+This is a fork of the [diffusers](https://github.com/huggingface/diffusers) repository with the only difference being the addition of the `train_dreambooth_inpaint_lora_sdxl.py` script. You could use this script to fine-tune the SDXL inpainting model UNet via LoRA adaptation with your own subject images. This could be useful in e-commerce applications, for virtual try-on for example.
+
+# Results
+
+After running a few tests, arguably, doing dreambooth finetuning on the SDXL-inpaint model gives higher quality images than the proposed alternative with [SD inpainting model](https://huggingface.co/runwayml/stable-diffusion-inpainting)
+
+<!-- Table with result images -->
+| SDXL Inpainting | SD Inpainting |
+|---|---|
+| <img src="results/home-1-sdxl-lora-inpainting-1.png" alt="SDXL Inpainting Example 1"> | <img src="results/home-1-lora-sd-inpainting-1.png" alt="SD Inpainting Example 1"> |
+| <img src="results/home-1-sdxl-lora-inpainting-2.png" alt="SDXL Inpainting Example 2"> | <img src="results/home-1-lora-sd-inpainting-2.png" alt="SD Inpainting Example 2"> 
+| More detailed and realistic results | Less detailed and realistic results |
+| Better at handling complex scenes | Struggles with complex scenes |
+| Can generate images from scratch | Requires an existing image to modify |
 
 # What this script maybe does
 
